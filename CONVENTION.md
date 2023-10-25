@@ -64,14 +64,18 @@ index.py
    - 'l'(소문자 엘), 'O'(대문자 오) 또는 'I'(대문자 아이) 문자를 단일 문자 변수 이름으로 사용 금지(예시 I, l, O <- 이렇게 사용 X)
 
   ### 함수
-1.
-board update
-board create
-2.
-create board
-update board
+  1.
+  ```
+  board update
+  board create
+  ```
+  2.
+  ```
+  create board
+  update board
+  ```
 
-[Django 컨벤션](https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/)
+  [Django 컨벤션](https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/)
 
  ### 변수, 함수, 클래스 네이밍
 - 함수, 변수, 속성 : losercase_underscore
