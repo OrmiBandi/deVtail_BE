@@ -26,12 +26,20 @@
 - 커뮤니티 게시판 기능 제공(분야별 개발자 게시판 포함)
 - 분야별 참여형 Open CheatSheet 기능 제공
 
-[<p style="text-align: right;">목차로</p>](#목차)
+<div align="right">
+  
+[목차로](#목차)
+
+</div>
 
 ## 2. 개발 기간
 2023.10.22 ~
 
-[<p style="text-align: right;">목차로</p>](#목차)
+<div align="right">
+  
+[목차로](#목차)
+
+</div>
 
 ## 3. 팀원 소개
 - 김나영
@@ -39,7 +47,11 @@
 - 이수빈
 - 황병헌
 
-[<p style="text-align: right;">목차로</p>](#목차)
+<div align="right">
+  
+[목차로](#목차)
+
+</div>
 
 ## 4. 개발 기술 및 환경 및 배포 URL
 ### 4-1. 개발 기술
@@ -62,33 +74,66 @@
 
 ### 4-3. 배포 URL
 
-[<p style="text-align: right;">목차로</p>](#목차)
+
+<div align="right">
+  
+[목차로](#목차)
+
+</div>
 
 ## 5. DB 구조
 
 
-[<p style="text-align: right;">목차로</p>](#목차)
+<div align="right">
+  
+[목차로](#목차)
+
+</div>
 
 ## 6. 주요 기능
 
-[<p style="text-align: right;">목차로</p>](#목차)
+
+<div align="right">
+  
+[목차로](#목차)
+
+</div>
 
 ## 7. 부가 기능
 
 
-[<p style="text-align: right;">목차로</p>](#목차)
+<div align="right">
+  
+[목차로](#목차)
+
+</div>
 
 ## 8. 기능 설명
 
-[<p style="text-align: right;">목차로</p>](#목차)
+
+<div align="right">
+  
+[목차로](#목차)
+
+</div>
 
 ## 9. 개발 이슈
 
-[<p style="text-align: right;">목차로</p>](#목차)
+
+<div align="right">
+  
+[목차로](#목차)
+
+</div>
 
 ## 10. 미흡했던 점, 추후 목표
 
-[<p style="text-align: right;">목차로</p>](#목차)
+
+<div align="right">
+  
+[목차로](#목차)
+
+</div>
 
 - 일정관리
   - 달력/스케줄표/todo앱 같은 개별 일정 관리 기능
