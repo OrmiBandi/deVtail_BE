@@ -22,30 +22,34 @@
 (커밋 이모지)Feat: 제목(추가한 기능 / 변경한 기능) (# 이슈번호)
 ✨Feat: Login 기능 개발 (#13)
 
-### 수정 파일
+- 수정 파일
 main.py
 index.py
 
-### 추가한 기능
+- 추가한 기능
 Login 기능 추가
 
-(필요한 경우) ## 비고
+(필요한 경우) - 비고
 ```
 ## Commit 예시(Fix)
 ```
 Fix 변경한 기능 (#이슈번호)
 🐛Fix: type_message_and_enter (#3)
 
-### 수정 파일
+- 수정 파일
 main.py
 index.py
 
-### 원인
+- 원인
 스터디 멤버들 호출 시 @'이름'에서 'tab'이 안눌림
 
-### 수정
+- 수정
 호출 인원이 많을 시 디스코드 반응이 늦어지는 것이 원인으로, sleep(0.1)을 sleep(0.3)으로 수정. 이후 또 안되면 0.5로 수정
+
+(필요한 경우) - 비고
 ```
+
+
 
 
 # 코드 컨벤션
@@ -58,52 +62,107 @@ index.py
    - 주석 위치: def, class 다음 라인에 ''' '''
    - import * 지양 (개별적으로 import)
    - 라인별 최대 길이는 72(왠만하면 가독성있는 방향)
+   - 소스 코드 파일 마지막 라인은 enter 한번 추가해서 끝내기
+   - protected 인스턴스 속성 : 시작은 _ 이후는 스네이크(예시 _leading_underscore)
+   - private 인스턴스 속성 : 시작은 __ 이후는 스네이크(__double_leading_underscore)
    
   ### 변수
-   - 네이밍: 스네이크(예시 hello_world)
+   - 네이밍: 스네이크(예시 hello_world) & only 소문자
    - 'l'(소문자 엘), 'O'(대문자 오) 또는 'I'(대문자 아이) 문자를 단일 문자 변수 이름으로 사용 금지(예시 I, l, O <- 이렇게 사용 X)
 
   ### 함수
-  1.
-  ```
-  board update
-  board create
-  ```
-  2.
-  ```
-  create board
-  update board
-  ```
+   - 네이밍: 스네이크 & only 소문자(예시 create_app)
+   - 함수 끝난 이후 다음 코드 시작시 enter 1칸
 
-  [Django 컨벤션](https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/)
+  ### Django 코드
+  - Settings.py의 SECRET_KEY는 절대로 외부로 유출되지 않게 한다. PostgreSQL을 쓸 경우에도 포함
 
- ### 변수, 함수, 클래스 네이밍
-- 함수, 변수, 속성 : losercase_underscore
-- protected 인스턴스 속성 : _leading_underscore
-- private 인스턴스 속성 : __double_leading_underscore
-- 클래스 및 예외 : CapitalizeWord
-- 모듈 수준 상수 : ALL_CAPS
-- 클래스의 인스턴스 메서드에서는 첫번째 파라미터 (해당 객체 참조)의 이름을 self로 지정
-- 클래스 메서드에서는 첫번째 파라미터(해당 클래스 참조)의 이름을 cls로 지정
+  - URL 패턴, 템플릿 블록 이름에는 대시(-) 대신 밑줄(_)을 이용한다
+  - template 변수 적용 시 변수 이름 앞 뒤 띄어쓰기 => {{ foo }} 와 같은 형태로 사용한다 ({{foo}} 처럼 사용 X)
+  - Model 필드 설정 시 소문자로만 작성한다
+    - Model에서 Meta 사용 시 class의 변수를 설정한 후 Meta를 설정한다.
+        
+  - [이외의 Django 컨벤션 기준](https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/)
+  
+ ### 클래스
+ - 네이밍: CapWards
+ - 함수 끝난 이후 다음 코드 시작시 enter 2칸
+ - 인스턴스 메서드 첫 파라미터 이름은 self
+ - 클래스 메서드 첫 파라미터 이름은 cls
 
- ## HTML/CSS 
- 1. 유효하고 읽을 수 있는 DOM 작성
-   - 모든 태그는 lowercase
-   - 들여쓰기 2칸
-   - HTML에서 주석 사용은 지양하기
- 2. 인라인 스타일과 스크립트 사용 지양
-   - 인라인 크리티컬 CSS : 중요한 CSS의 경우 맨 위에 배치
- 3. script 태그는 맨 아래 배치
-   - 본문과 스크립트의 로딩 순서의 문제로 오류 발생 가능
-   - script를 아래 두고도 해결이 안되면 defer 태그 추가
- 4. 이미지에 alt 태그 사용
+ ### 예외
+ - 네이밍: CapWards
+
+ ### 상수
+ - 네이밍: ALL_CAPS
+ - 관리: APP별 상수 파일에서 관리
+
+ ## HTML
+ - " 먼저 ' 이후
+ ### 가독성: 유효하고 읽기 쉬운 DOM 작성
+ - 모든 태그는 lowercase
+ - 들여쓰기 2칸
+ - HTML에서 주석 사용은 지양하기
+ - 컴포넌트 시작과 끝에 주석 달기
+    ```html
+    <!-- BEGIN NAVBAR --> <!-- END NAVBAR -->
+    ```
+ 
+ ### script 태그
+ - 맨 아래 배치
+ - 본문과 스크립트의 로딩 순서의 문제로 오류 발생 가능
+ - script를 아래 두고도 해결이 안되면 defer 태그 추가
+
+ ### 접근성
+ - 이미지에 alt 태그 사용
    - 로드, 경로 문제 등으로 이미지가 나오지 않을 때 텍스트가 표시되도록
- 5. 하나의 페이지에는 하나의 h1
-   - h1~h5 순서대로 나올 수 있도록. 글자 크기가 마음에 안 들 경우 CSS에서 수정
- 6. 제목 및 메타 태그 사용
- 7. 페이지 완성 시 HTML 유효성 확인
-   - https://validator.w3.org/
+ - 하나의 페이지에는 하나의 h1
+   - h1~h5 순서대로 나올 수 있도록하고 글자 크기가 마음에 안 들 경우 CSS에서 수정
+ - 제목 및 메타 태그 사용
+ - 페이지 완성 시 HTML [유효성 확인 (w3c 유효성 검사기)](https://validator.w3.org/)
+   
+ ## CSS
+ - " 먼저 ' 이후
+ - 들여쓰기 2칸
+ - 인라인 스타일 사용 지양
+   - (예외) 인라인 크리티컬 CSS : 중요한 CSS의 경우 맨 위에 배치
 
  ## JavaScript
- 
-# 문서 컨벤션
+ - " 먼저 ' 이후
+ - 들여쓰기 2칸
+ - 소스파일의 이름은 알파벳 소문자, 대쉬(-), 밑줄(_)으로만 작성 (예시 main_function.js)
+ - 인라인 스크립트 사용 지양
+
+ ### 중괄호의 사용은 Kernighan and Ritchie Style에 따른다.
+ - 여는 중괄호 전에는 줄을 바꾸지 않으며, 이후에 줄을 바꾼다.
+ - 닫는 중괄호 전에 줄을 바꾸며, 이후에 줄을 바꿔준다.
+    ```JavaScript
+    //  예시
+    class InnerClass {
+      constructor() {}
+
+      /** @param {number} foo */
+      method(foo) {
+        if (condition(foo)) {
+          try {
+            something();
+          } catch (err) {
+            recover();
+          }
+        }
+      }
+    }
+    ```
+ ### 변수 선언
+ - 가능하면 const를 사용한다.
+ - const 변수를 먼저 선언하고 그룹화한 뒤 let 변수를 선언한다.
+    ```JavaScript
+    // 예시
+    const goSportsTeam = true;
+    const items = getItems();
+    let dragonball;
+    let i;
+    let length;
+    ```
+
+<!-- # 문서 컨벤션 -->
