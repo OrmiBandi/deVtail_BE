@@ -1,5 +1,14 @@
-# COMMIT 컨벤션
-## 태그
+# CONVENTION
+
+## 목차
+[1. COMMIT 컨벤션](#1-COMMIT-컨벤션)<br>
+[2. 코드 컨벤션](#2-코드-컨벤션)<br>
+&ensp;[2-1. Python](#2-1-python)<br>
+&ensp;[2-2. HTML/CSS](#2-2-htmlcss)<br>
+&ensp;[2-3. JavaScript](#2-3-javascript)
+
+## 1. COMMIT 컨벤션
+### 태그
 |이모지 |이모지 태그             |태그 이름        |설명                                                               |
 |-------|-----------------------|----------------|------------------------------------------------------------------|
 |✨    |`:sparkles:`           |Feat            |새로운 기능을 추가할 경우                                            |
@@ -17,7 +26,7 @@
 |🐛    |`:bug:`                |!HOTFIX         |급하게 치명적인 버그를 고쳐야하는 경우                                |
 
 
-## Commit 예시(Feat)
+### Commit 예시(Feat)
 ```
 (커밋 이모지)Feat: 제목(추가한 기능 / 변경한 기능) (# 이슈번호)
 ✨Feat: Login 기능 개발 (#13)
@@ -31,7 +40,7 @@ Login 기능 추가
 
 (필요한 경우) - 비고
 ```
-## Commit 예시(Fix)
+### Commit 예시(Fix)
 ```
 Fix 변경한 기능 (#이슈번호)
 🐛Fix: type_message_and_enter (#3)
@@ -52,8 +61,8 @@ index.py
 
 
 
-# 코드 컨벤션
- ## Python 코드
+## 2. 코드 컨벤션
+ ## 2-1. Python
   - 전체적인 컨벤션 기준은 [PEP 8](https://peps.python.org/pep-0008/)로 한다.
 
   ### 공통
@@ -97,6 +106,7 @@ index.py
  - 네이밍: ALL_CAPS
  - 관리: APP별 상수 파일에서 관리
 
+ ## 2-2. HTML/CSS
  ## HTML
  - " 먼저 ' 이후
  ### 가독성: 유효하고 읽기 쉬운 DOM 작성
@@ -121,13 +131,13 @@ index.py
  - 제목 및 메타 태그 사용
  - 페이지 완성 시 HTML [유효성 확인 (w3c 유효성 검사기)](https://validator.w3.org/)
    
- ## CSS
+ ##  CSS
  - " 먼저 ' 이후
  - 들여쓰기 2칸
  - 인라인 스타일 사용 지양
    - (예외) 인라인 크리티컬 CSS : 중요한 CSS의 경우 맨 위에 배치
 
- ## JavaScript
+ ## 2-3. JavaScript
  - " 먼저 ' 이후
  - 들여쓰기 2칸
  - 소스파일의 이름은 알파벳 소문자, 대쉬(-), 밑줄(_)으로만 작성 (예시 main_function.js)
