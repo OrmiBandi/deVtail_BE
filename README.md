@@ -68,7 +68,7 @@
 <!-- <img src="https://img.shields.io/badge/텍스트-컬러코드?style=flat-square&logo=아이콘이름&logoColor=white"/> -->
 
 ### 4-2. 개발 환경
-<img src="https://img.shields.io/badge/visualstudio-007ACC?style=flat-square&logo=visualstudio&logoColor=white">
+<img src="https://img.shields.io/badge/visualstudio-007ACC?style=flat-square&logo=visualstudio&logoColor=whithe">
 <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/>
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white"/>
 <img src="https://img.shields.io/badge/discord-5865F2?style=flat-square&logo=discord&logoColor=white"/>
@@ -89,6 +89,7 @@
   
 [목차로](#목차)
 
+</div>
 
 ## 6. DB 구조
 

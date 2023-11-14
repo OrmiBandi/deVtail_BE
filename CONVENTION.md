@@ -6,7 +6,7 @@
 |🐛    |`:bug:`                |Fix             |버그를 고친 경우                                                    |
 |💄    |`:lipstick:`           |Design          |CSS 등 사용자 UI 디자인 변경                                         |
 |🎨    |`:art:`                |Style           |코드 포맷 변경, 세미 콜론 누락, 코드 수정이 없는 경우                  |
-|♻️    |`:recycle:`            |Refactor        |프로덕션 코드 리팩토링                                               |
+|♻️     |`:recycle:`            |Refactor        |프로덕션 코드 리팩토링                                               |
 |💡    |`:bulb:`               |Comment         |필요한 주석 추가 및 변경                                             |
 |📝    |`:memo:`               |Docs            |문서를 수정한 경우                                                   |
 |🧪    |`:test_tube:`          |Test            |테스트 추가, 테스트 리팩토링(프로덕션 코드 변경 X)                     |
