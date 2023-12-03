@@ -55,6 +55,11 @@ INSTALLED_APPS = [
     'main',
     'study',
     'accounts',
+    'alert',
+    'devmate',
+    'schedule',
+    'todo',
+    'chat',
 ]
 
 MIDDLEWARE = [
