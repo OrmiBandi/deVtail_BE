@@ -65,7 +65,7 @@
 <img src="https://img.shields.io/badge/python-3776AB?style=flat-square&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/django-092E20?style=flat-square&logo=django&logoColor=white"/>
 <!-- DB -->
-<!-- <img src="https://img.shields.io/badge/텍스트-컬러코드?style=flat-square&logo=아이콘이름&logoColor=white"/> -->
+<img src="https://img.shields.io/badge/postgresql-4169E1?style=flat-square&logo=postgresql&logoColor=white"/>
 
 ### 4-2. 개발 환경
 <img src="https://img.shields.io/badge/visualstudio-007ACC?style=flat-square&logo=visualstudio&logoColor=whithe">
@@ -92,7 +92,7 @@
 </div>
 
 ## 6. DB 구조
-
+<img src="./static/images/erd.png">
 
 <div align="right">
   
