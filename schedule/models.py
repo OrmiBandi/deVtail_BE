@@ -11,7 +11,7 @@ class Schedule(models.Model):
     )
     schedule_title = models.CharField(max_length=100)
     schedule_content =models.CharField(max_length=200, null=True, blank=True)
-    schedule_start = models.DateTimeField(null=True)
+    schedule_start = models.DateTimeField(null=True, blank=True)
     schedule_end = models.DateTimeField(null=True)
 
     class Meta:

@@ -10,7 +10,7 @@ class Todo(models.Model):
         'study.Study', on_delete=models.CASCADE, related_name='todos'
     )
     user = models.ForeignKey(
-        'accounts.User', on_delete=models.CASCADE, related_name='todos', null=True
+        'accounts.User', on_delete=models.CASCADE, related_name='todos', null=True, blank=True
     )
     todo_title = models.CharField(max_length=100)
     todo_content =models.CharField(max_length=200, null=True, blank=True)
