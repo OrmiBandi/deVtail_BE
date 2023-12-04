@@ -18,6 +18,7 @@ class Study(models.Model):
         (6, '토요일'),
         (7, '일요일'),
     ]
+
     chat_room = models.ForeignKey('chat.ChatRoom', on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey('Category', on_delete=models.PROTECT)
     leader = models.ForeignKey('accounts.User', on_delete=models.PROTECT)
@@ -35,6 +36,10 @@ class Study(models.Model):
     max_member = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        verbose_name = '스터디'
+        verbose_name_plural = '스터디'
+
     def __str__(self):
         return f'스터디장 : {self.user.username}, 스터디 목표 : {self.study_goal}'
 
@@ -46,6 +51,10 @@ class Category(models.Model):
      - 운영진이 카테고리를 생성, 저장하고 목록을 제공하는 방식
     '''
     name = models.CharField(max_length=20)
+
+    class Meta:
+        verbose_name = '카테고리'
+        verbose_name_plural = '카테고리'
 
     def __str__(self):
         return self.name
@@ -60,6 +69,10 @@ class Tag(models.Model):
     study = models.ForeignKey('Study', on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
 
+    class Meta:
+        verbose_name = '태그'
+        verbose_name_plural = '태그'
+
     def __str__(self):
         return self.name
 
@@ -72,6 +85,10 @@ class RefLink(models.Model):
     study = models.ForeignKey('Study', on_delete=models.CASCADE)
     category = models.CharField(max_length=100)
     content = models.CharField(max_length=100)
+
+    class Meta:
+        verbose_name = '참조링크'
+        verbose_name_plural = '참조링크'
 
     def __str__(self):
         return self.content
@@ -89,6 +106,10 @@ class Comment(models.Model):
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
 
+    class Meta:
+        verbose_name = '댓글'
+        verbose_name_plural = '댓글'
+
     def __str__(self):
         return f'스터디 : {self.study}, 작성자 : {self.user.username}'
 
@@ -99,6 +120,11 @@ class StudyMember(models.Model):
     study = models.ForeignKey('Study', on_delete=models.CASCADE)
     user = models.ForeignKey('accounts.User', on_delete=models.CASCADE)
     is_accepted = models.BooleanField(default=False)
+
+    class Meta:
+        verbose_name = '스터디 멤버'
+        verbose_name_plural = '스터디 멤버'
+
 
     def __str__(self):
         return f'스터디 : {self.study}, 회원 : {self.user.username}'
