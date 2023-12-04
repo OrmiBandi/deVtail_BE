@@ -1,32 +1,28 @@
 from django.db import models
-from accounts.models import User
 
-
-class DevMate:
+class DevMate(models.Model):
     '''
     DevMate 모델
     '''
-
     send_user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='send_users'
+        'accounts.User', on_delete=models.CASCADE, related_name='send_users'
     )
     receive_user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='receive_users'
+        'accounts.User', on_delete=models.CASCADE, related_name='receive_users'
     )
     status = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
 
 
-class UserBlock:
+class UserBlock(models.Model):
     '''
     사용자 차단 모델
     '''
-
     blocking_user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='blocking_users'
+        'accounts.User', on_delete=models.CASCADE, related_name='blocking_users'
     )
     blocked_user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='blocked_users'
+        'accounts.User', on_delete=models.CASCADE, related_name='blocked_users'
     )
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -35,16 +31,15 @@ class UserBlock:
         verbose_name_plural = '사용자 차단'
 
 
-class UserReport:
+class UserReport(models.Model):
     '''
     사용자 신고 모델
     '''
-
     reporting_user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='reporting_users'
+        'accounts.User', on_delete=models.CASCADE, related_name='reporting_users'
     )
     reported_user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='reported_users'
+        'accounts.User', on_delete=models.CASCADE, related_name='reported_users'
     )
     reason = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
