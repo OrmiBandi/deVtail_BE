@@ -128,3 +128,18 @@ class StudyMember(models.Model):
 
     def __str__(self):
         return f'스터디 : {self.study}, 회원 : {self.user.username}'
+    
+class Favorite(models.Model):
+    '''
+    스터디 즐겨찾기 모델
+    '''
+    user = models.ForeignKey('accounts.User', on_delete=models.CASCADE)
+    study = models.ForeignKey('Study', on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = '스터디 즐겨찾기'
+        verbose_name_plural = '스터디 즐겨찾기'
+
+    
+    def __str__(self):
+        return f'스터디 즐겨찾기 : {self.study}, 회원 : {self.user.username}'
