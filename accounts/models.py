@@ -1,8 +1,8 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, PermissionsMixin
 from .managers import CustomUserManager
 
-class User(AbstractUser):
+class User(AbstractUser, PermissionsMixin):
     '''
     사용자 모델
     '''

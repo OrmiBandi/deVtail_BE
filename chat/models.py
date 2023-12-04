@@ -19,7 +19,7 @@ class ChatMessage(models.Model):
     message = models.CharField(max_length=500)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    author = models.ForeignKey('accounts.User')
+    author = models.ForeignKey('accounts.User', on_delete=models.SET_NULL, null=True)
     chat_room = models.ForeignKey('ChatRoom', on_delete=models.CASCADE)
 
     class Meta:
