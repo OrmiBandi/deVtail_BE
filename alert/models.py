@@ -16,7 +16,7 @@ class Alert(models.Model):
     ]
 
     user = models.ForeignKey(
-        'accounts.User', on_delete=models.CASCADE, related_name='alerts'
+        'accounts.User', on_delete=models.CASCADE
     )
     alert_content = models.CharField(max_length=100)
     alert_category = models.CharField(max_length=20, choices=ALERT_CATEGORIES)
