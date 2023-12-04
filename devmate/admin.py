@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import DevMate, UserBlock, UserReport
 
-# Register your models here.
+admin.site.register(DevMate)
+admin.site.register(UserBlock)
+admin.site.register(UserReport)
