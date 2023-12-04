@@ -134,7 +134,7 @@ class Favorite(models.Model):
     스터디 즐겨찾기 모델
     '''
     user = models.ForeignKey('accounts.User', on_delete=models.CASCADE)
-    study = models.ForeignKey('Study', on_delete=models.CASCADE)
+    study = models.ForeignKey('Study', on_delete=models.SET_NULL)
 
     class Meta:
         verbose_name = '스터디 즐겨찾기'
