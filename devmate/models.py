@@ -4,11 +4,11 @@ class DevMate(models.Model):
     '''
     DevMate 모델
     '''
-    send_user = models.ForeignKey(
-        'accounts.User', on_delete=models.CASCADE, related_name='send_users'
+    sent_user = models.ForeignKey(
+        'accounts.User', on_delete=models.CASCADE, related_name='sent_users'
     )
-    receive_user = models.ForeignKey(
-        'accounts.User', on_delete=models.CASCADE, related_name='receive_users'
+    received_user = models.ForeignKey(
+        'accounts.User', on_delete=models.CASCADE, related_name='received_users'
     )
     status = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
